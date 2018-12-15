@@ -36,6 +36,12 @@ var SingleUser = UserGeneratorService.GetSingleUser().results.ElementAtOrDefault
 var MultipleUsers = UserGeneratorService.GetMultipleUsers(10).results;
 ```
 
+- **How do I get a previous user back again?**
+to do this you need to locally cache to seed varaible within the user/s.
+```c#
+var MultipleUsers = UserGeneratorService.GetSpecificUser(User.seed).results;
+```
+
 ---
 
 ## License
