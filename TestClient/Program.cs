@@ -12,10 +12,9 @@ namespace TestClient
         public static void Main(string[] args)
         {
             Console.WriteLine("Getting Single User");
-            var Users = UserGeneratorService.GetSingleUser() as InfoResponce;
-            var SingleUser = Users.results.ElementAtOrDefault(0);
-            Console.WriteLine(Users.results.Count + " User Found.");
-            Console.WriteLine("FOUND:" + SingleUser.name.FormattedName);
+            var SingleUser = UserGeneratorService.GetSingleUser().results.ElementAtOrDefault(0);
+            Console.WriteLine("FOUND: " + SingleUser.name.FormattedName);
+            var MultipleUsers = UserGeneratorService.GetMultipleUsers(10).results;
         }
     }
 }

@@ -27,10 +27,13 @@
 
 ## FAQ
 
-- **How do I get a single User?**
+- **How do I get a single user?**
 ```c#
-// code away!
 var SingleUser = UserGeneratorService.GetSingleUser().results.ElementAtOrDefault(0);
+```
+- **How do I get a certain amount of users?**
+```c#
+var MultipleUsers = UserGeneratorService.GetMultipleUsers(10).results;
 ```
 
 ---

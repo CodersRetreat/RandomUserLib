@@ -28,7 +28,7 @@ namespace RandomUserLib.Services
             return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn+"?seed="+seed));
         }
 
-        public static InfoResponce GetMultipleUser(int amountOfUsers)
+        public static InfoResponce GetMultipleUsers(int amountOfUsers)
         {
             return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?results=" + amountOfUsers));
 
@@ -39,7 +39,7 @@ namespace RandomUserLib.Services
             return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?nat=" + nationality));
         }
 
-        public static InfoResponce GetMultiUserSpecificNationality(string nationality,int amountOfUsers)
+        public static InfoResponce GetMultiUsersSpecificNationality(string nationality,int amountOfUsers)
         {
             return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?nat=" + nationality+ "&results="+ amountOfUsers));
         }
@@ -49,7 +49,7 @@ namespace RandomUserLib.Services
             return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?nat=" + UrlFormingHelper.ProduceMultiNationalities(nationalities)));
         }
 
-        public static InfoResponce GetMultiUserSpecificMixedNationality(List<string> nationalities, int amountOfUsers)
+        public static InfoResponce GetMultiUsersSpecificMixedNationality(List<string> nationalities, int amountOfUsers)
         {
             return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?nat=" +UrlFormingHelper.ProduceMultiNationalities(nationalities) + "&results=" + amountOfUsers));
         }
