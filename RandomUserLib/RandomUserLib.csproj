@@ -46,11 +46,16 @@
     <Compile Include="Models\PersonaID.cs" />
     <Compile Include="Models\PersonaImageSet.cs" />
     <Compile Include="Enumerations\Nationality.cs" />
+    <Compile Include="Services\UserGeneratorService.cs" />
+    <Compile Include="Constants\WebUrls.cs" />
+    <Compile Include="Helpers\UrlFormingHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Services\" />
     <Folder Include="Enumerations\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
