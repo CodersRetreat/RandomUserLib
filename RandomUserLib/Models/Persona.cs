@@ -17,7 +17,7 @@ namespace RandomUserLib.Models
         public PersonaLogin login { get; set; }
         public PersonaDateItem dob { get; set; }
         public PersonaDateItem registered { get; set; }
-        public int phone { get; set; }
+        public string phone { get; set; }
         public string cell { get; set; }
         public PersonaID id { get; set; }
         public PersonaImageSet picture { get; set; }

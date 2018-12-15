@@ -8,55 +8,50 @@ using RandomUserLib.Enumerations;
 using RandomUserLib.Helpers;
 using RandomUserLib.Models;
 
+//==========================================
+//Title:  Random User Generator
+//Author: Robert Wildgoose
+//Date:   15 Dec 2018
+//==========================================
+
 namespace RandomUserLib.Services
 {
     public class UserGeneratorService
     {
         public static InfoResponce GetSingleUser()
         {
-            return JsonConvert.DeserializeObject<InfoResponce>(GetDataFromApi(WebUrls.SingleUserReturn));
-
+            return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn));
         }
 
         public static InfoResponce GetSpecificUser(string seed)
         {
-            return JsonConvert.DeserializeObject<InfoResponce>(GetDataFromApi(WebUrls.SingleUserReturn+"?seed="+seed));
+            return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn+"?seed="+seed));
         }
 
         public static InfoResponce GetMultipleUser(int amountOfUsers)
         {
-            return JsonConvert.DeserializeObject<InfoResponce>(GetDataFromApi(WebUrls.SingleUserReturn + "?results=" + amountOfUsers));
+            return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?results=" + amountOfUsers));
 
         }
 
         public static InfoResponce GetSingleUserSpecificNationality(string nationality)
         {
-            return JsonConvert.DeserializeObject<InfoResponce>(GetDataFromApi(WebUrls.SingleUserReturn + "?nat=" + nationality));
+            return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?nat=" + nationality));
         }
 
         public static InfoResponce GetMultiUserSpecificNationality(string nationality,int amountOfUsers)
         {
-            return JsonConvert.DeserializeObject<InfoResponce>(GetDataFromApi(WebUrls.SingleUserReturn + "?nat=" + nationality+ "&results="+ amountOfUsers));
+            return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?nat=" + nationality+ "&results="+ amountOfUsers));
         }
 
         public static InfoResponce GetSingleUserSpecificMixedNationality(List<string> nationalities)
         {
-            return JsonConvert.DeserializeObject<InfoResponce>(GetDataFromApi(WebUrls.SingleUserReturn + "?nat=" + UrlFormingHelper.ProduceMultiNationalities(nationalities)));
+            return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?nat=" + UrlFormingHelper.ProduceMultiNationalities(nationalities)));
         }
 
         public static InfoResponce GetMultiUserSpecificMixedNationality(List<string> nationalities, int amountOfUsers)
         {
-            return JsonConvert.DeserializeObject<InfoResponce>(GetDataFromApi(WebUrls.SingleUserReturn + "?nat=" +UrlFormingHelper.ProduceMultiNationalities(nationalities) + "&results=" + amountOfUsers));
-        }
-
-        private static string GetDataFromApi(string url)
-        {
-            string JsonData;
-            using (WebClient wc = new WebClient())
-            {
-                JsonData = wc.DownloadString(url);
-            }
-            return JsonData;
+            return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?nat=" +UrlFormingHelper.ProduceMultiNationalities(nationalities) + "&results=" + amountOfUsers));
         }
     }
 }

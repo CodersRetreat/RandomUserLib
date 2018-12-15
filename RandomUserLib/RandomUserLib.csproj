@@ -49,6 +49,7 @@
     <Compile Include="Services\UserGeneratorService.cs" />
     <Compile Include="Constants\WebUrls.cs" />
     <Compile Include="Helpers\UrlFormingHelper.cs" />
+    <Compile Include="Helpers\StringFormatingHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

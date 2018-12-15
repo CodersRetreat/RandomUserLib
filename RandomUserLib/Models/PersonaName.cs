@@ -1,4 +1,5 @@
 ﻿using System;
+using RandomUserLib.Helpers;
 
 //==========================================
 //Title:  Random User Generator
@@ -14,5 +15,10 @@ namespace RandomUserLib.Models
         public string title { get; set; }
         public string first { get; set; }
         public string last { get; set; }
+        public string FormattedName{
+            get{
+                return StringFormatingHelper.FormatTitleCase(title) + " " + StringFormatingHelper.FormatTitleCase(first) + " " + StringFormatingHelper.FormatTitleCase(last);
+            }
+        }
     }
 }
