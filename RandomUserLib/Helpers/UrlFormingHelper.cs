@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using System.Net;
 
+//==========================================
+//Title:  Random User Generator
+//Author: Robert Wildgoose
+//Date:   15 Dec 2018
+//==========================================
+
 namespace RandomUserLib.Helpers
 {
     public class UrlFormingHelper
