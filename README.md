@@ -27,7 +27,7 @@
 
 ***INSERT ANOTHER GRAPHIC HERE***
 
-[![INSERT YOUR GRAPHIC HERE](logo.png)]()
+[![INSERT YOUR GRAPHIC HERE](RandomUserLib/logo.png)]()
 
 - Most people will glance at your `README`, *maybe* star it, and leave
 - Ergo, people should understand instantly what your project is about based on your repo
