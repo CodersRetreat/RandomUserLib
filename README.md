@@ -1,10 +1,10 @@
-<a href="http://www.robertwildgoose.co.uk"><img src="bannerTop.png" title="RobertWildgoose" alt="RobertWildgoose"></a>
+<a href="http://www.robertwildgoose.co.uk"><img src="GitAssets/bannerTop.png" title="RobertWildgoose" alt="RobertWildgoose"></a>
 
 # Random User Generator Library For C#
 
 > This library generates valid content for users, in order to produce testable data for C# software and Xamarin Applications.
 
-[![Logo](logo.png)]()
+[![Logo](GitAssets/logo.png)]()
 
 - Included in the repo is a test project that acts as a demo to show how this code works.
 
