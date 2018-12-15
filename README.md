@@ -37,7 +37,7 @@ var MultipleUsers = UserGeneratorService.GetMultipleUsers(10).results;
 ```
 
 - **How do I get a previous user back again?**
-****To do this you need to locally cache to seed varaible within the user/s.****
+Holding onto the seed attribute within a Persona will provide you a way to get a previously gotten persona.
 ```c#
 var MultipleUsers = UserGeneratorService.GetSpecificUser(User.seed).results;
 ```
