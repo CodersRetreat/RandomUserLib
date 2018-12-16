@@ -42,6 +42,18 @@ Holding onto the seed attribute within a Persona will provide you a way to get a
 var MultipleUsers = UserGeneratorService.GetSpecificUser(User.seed).results;
 ```
 
+- **How do I get a User from a specific Demographic?**
+
+This User Will Return As Being From Spain
+```c#
+var SpanishUser = UserGeneratorService.GetSingleUserSpecificNationality(Nationality.Spain).results.ElementAtOrDefault(0);
+```
+- **How do I get a Set Of 10 Users from a specific Demographic?**
+The Returned Users Will Return As Being From Spain
+```c#
+var MultipleSpanishUser = UserGeneratorService.GetMultiUsersSpecificNationality(Nationality.Spain,10).results;
+```
+
 ---
 
 ## License

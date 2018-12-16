@@ -48,10 +48,5 @@ namespace RandomUserLib.Services
         {
             return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?nat=" + UrlFormingHelper.ProduceMultiNationalities(nationalities)));
         }
-
-        public static InfoResponce GetMultiUsersSpecificMixedNationality(List<string> nationalities, int amountOfUsers)
-        {
-            return JsonConvert.DeserializeObject<InfoResponce>(UrlFormingHelper.ProduceJsonStringFromUrl(WebUrls.SingleUserReturn + "?nat=" +UrlFormingHelper.ProduceMultiNationalities(nationalities) + "&results=" + amountOfUsers));
-        }
     }
 }
