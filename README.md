@@ -11,13 +11,11 @@
 
 ## Table of Contents (Optional)
 
-> If you're `README` has a lot of info, section headers might be nice.
-
 - [Installation](#installation)
 - [FAQ](#faq)
 - [License](#license)
 
-
+![Random User Library](https://github.com/RobertWildgoose/Random-User-Library-CSharp/workflows/Random%20User%20Library/badge.svg)
 ---
 
 ## Installation
